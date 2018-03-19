@@ -95,7 +95,7 @@ class Db extends PridatClanek
         $this->stmt = $this->spojeni->prepare("INSERT INTO `clanky` (title, short_describe, content, regdate) VALUES (?,?,?,?)");
 
         $this->stmt->bind_param("ssss", $_POST["nazev"], $_POST["shortDescribe"], $_POST["content"],
-                                            date("Y-m-d h:i:s"));
+                                            "time");
 
 
 

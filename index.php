@@ -24,11 +24,16 @@ require_once("Tridy/Db.php");
 require_once("Tridy/PridatClanek.php");
 require_once("Tridy/getHTML.php");
 require_once("Tridy/Db.php");
+require_once("Tridy/Forms.php");
 $d = new Db("localhost", "root", "", "test");
 $d->Check();
 $f = new PridatClanek("nazev", "shortDescribe", "content", "submit", "https://unsplash.com/photos/5fNmWej4tAA", "Přidat článek");
 //$d->getQuery("INSERT INTO clanky (title, short_describe, content) VALUES ($this->nazev, $this->shortDescribe, $this->content)");
-$d->InsertQuery();
+//$d->InsertQuery();
+
+$forms = new Forms('jhbn', 'hnjn', 'nmbnm', "khkjn", "reg.form");
+$forms->addText('text', 'Jmeno:', 'firstname', 'btn btn-success');
+$forms->addGroup('register', 'Registration form');
 
 
 $d->checkQ();
