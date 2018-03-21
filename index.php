@@ -31,7 +31,7 @@ $f = new PridatClanek("nazev", "shortDescribe", "content", "submit", "https://un
 //$d->getQuery("INSERT INTO clanky (title, short_describe, content) VALUES ($this->nazev, $this->shortDescribe, $this->content)");
 //$d->InsertQuery();
 
-$forms = new Forms('jhbn', 'hnjn', 'nmbnm', "khkjn", "reg.form");
+$forms = new Forms("jhbn", "hnjn", "nmbnm", "khkjn", "reg.form", "testing");
 $forms->addText('text', 'Jmeno:', 'firstname', 'btn btn-success');
 $forms->addGroup('register', 'Registration form');
 
