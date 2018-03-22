@@ -30,9 +30,10 @@ $d->Check();
 $f = new PridatClanek("nazev", "shortDescribe", "content", "submit", "https://unsplash.com/photos/5fNmWej4tAA", "Přidat článek");
 //$d->getQuery("INSERT INTO clanky (title, short_describe, content) VALUES ($this->nazev, $this->shortDescribe, $this->content)");
 //$d->InsertQuery();
-
-$forms = new Forms("jhbn", "hnjn", "nmbnm", "khkjn", "reg.form", "testing");
-$forms->addText('text', 'Jmeno:', 'firstname', 'btn btn-success');
+                    //$label, $class, $name, $type, $legend, $value
+$forms = new Forms("jhbn", "hnjn", "nmbnm", "submit", "reg.form", "testing");
+//$forms->addText('text', 'Jmeno:', 'firstname', 'btn btn-success');
+$forms->addSubmit("submit", "Register !");
 $forms->addGroup('register', 'Registration form');
 
 
@@ -42,7 +43,7 @@ $d->checkQ();
 
 $t = new getHTML("div", "wrapper");
 
-$t->getFirst();
+//$t->getFirst();
 $f->getField();
 $f->getTititle();
 $f->generateForm();
@@ -53,3 +54,4 @@ $f->JSCehecker();
 $t->getLast();
 
 ?>
+42

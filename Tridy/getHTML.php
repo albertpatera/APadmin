@@ -8,25 +8,29 @@
  */
 class getHTML
 {
-    public function __construct($type,$name)
-    {
-        $this->name = $name;
-        $this->type = $type;
-    }
+    public $name;
+    public $typeT;
 
+    public function __construct($typeT,$name)
+    {
+        $this->typeT = $typeT;
+        $this->name = $name;
+    }
+/*
     public function getFirst()
     {
         echo "<" . $this->type  . " id=" . $this->name. "  >";
     }
-
-    public function getLast()
+*/
+    public function getEnd($typeT)
     {
-        echo "</" . $this->type . ">";
+        echo "</" . $this->typeT . ">";
     }
 
-    public function Alone($type) {
-        echo "<" . $type . ">";
+    public function getStart($typeT) {
+        echo "<" . $this->$typeT . ">";
     }
 
 
 }
+

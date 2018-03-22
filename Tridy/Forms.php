@@ -30,6 +30,12 @@ class Forms
 		$this->value = $value;
 	}
 
+	public function initHTML()
+	{
+		$html = new getHTML('p', 'paragraph');
+
+	}
+
 	public function addLabel($label) {
 		echo "<label class='label'>" . $this->label  . "</label>";  
 	}
@@ -54,18 +60,21 @@ class Forms
 
 	public function addSubmit($type, $value)
 	{
-		echo "<input type='" . $this->type ."' value='"  . $this->value  . "'>"; 
+		echo "<input type=" . $this->type ." value='"  . $this->value  . "'>"; 
 	}
 
 	public function addGroup($class, $legend) 
 	{
+		$html = new getHTML('p', 'paragraph');
+		$html->getStart('p');
 		echo "<fieldset>";
 			echo "<legend>" . $this->legend . "</legend>";	
-			self::addText($type, $class, $name, $label);
-			self::addPassword($type, $class, $name, $label);
-			self::addEmail($type, $class, $name, $label);
-			self::addSubmit($type, $class, $name, $label);
+			Forms::addText($this->type, $this->class, $this->name, $this->label);
+			Forms::addPassword($this->type, $this->class, $this->name, $this->label);
+			Forms::addEmail($this->type, $this->class, $this->name, $this->label);
+			Forms::addSubmit($this->type, $this->class, $this->name, $this->label);
 		echo "</fieldset>";
+		$html->getEnd('p');
 	}
 		
 }
