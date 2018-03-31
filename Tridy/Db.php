@@ -75,11 +75,11 @@ class Db extends PridatClanek
     }
     public function checkQ()
     {
-        /*if($this->stmt->execute())
+        if($this->stmt->execute())
         {
             echo "OK Q complete";
         }
-        */
+       
     }
 
     public function CheckIfSubmitted() {

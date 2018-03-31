@@ -19,11 +19,11 @@ class PridatClanek
      * Deklarace argumentu + deklarace roli
      */
 
-    public $nazev;
-    public $shortDescribe;
-    public $content;
-    private $submit;
-    public $title;
+    private static $nazev;
+    private static $shortDescribe;
+    private static $content;
+    private static $submit;
+    private static $title;
 
     public function __construct($nazev, $shortDesctibe, $content, $submit, $imgCat, $title)
     {
@@ -94,11 +94,14 @@ class PridatClanek
         <?php
     }
 
-    public function vlozZaznam()
+    
+    public static function vlozZaznam()
     {
-        if($this->submit) {
+        if($_POST['submit']) {
 
-            Db::getQuery("INSERT INTO clanky (title, short_describe, content) VALUES ($this->nazev,$this->shortDescribe,$this->content)");
+            Db::getQuery("INSERT INTO clanky (title, short_describe, content) VALUES (". $_POST['nazev'] . ", ". $_POST['shortDescribe'] . ", ".$_POST['content'] . ")");
+            var_dump("kkk");
+            die();
             Db::getQuery()->execute();
         }
     }
