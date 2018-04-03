@@ -13,6 +13,9 @@ class Db extends PridatClanek
     /*
  * @return mysqli
  */
+
+    private static $spojeni;
+    private static $stmt;
     public function getSpojeni()
     {
         return $this->spojeni;
@@ -89,13 +92,12 @@ class Db extends PridatClanek
         }
     }
 
-    public function InsertQuery()
+    public static function InsertQuery()
     {
 
-        $this->stmt = $this->spojeni->prepare("INSERT INTO `clanky` (title, short_describe, content, regdate) VALUES (?,?,?,?)");
-
-        $this->stmt->bind_param("ssss", $_POST["nazev"], $_POST["shortDescribe"], $_POST["content"],
-                                            "time");
+        Db::$stmt = $spojeni::prepare("INSERT INTO `clanky`  VALUES ('?','3','?','?')");
+        var_dump("l");
+        $this->stmt->bind_param("ssss","", "$_POST", "$_POST",'time');
 
 
 

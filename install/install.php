@@ -1,5 +1,5 @@
 <?php
-
+/*
 $id = $_POST["id"];
 $mysqli = new mysqli("localhost", "root", "", "test");
 
@@ -17,7 +17,7 @@ if($stmt->num_rows() == 0) {
 }
 $result = array();
 
-while($row = $result->fetch_array(MYSQLI_ASSOC))
+while($row = $result->fetch_assocs())
 {
 	array_push($result, array('id' => $row["id"],
 						'title' => $row["title"])

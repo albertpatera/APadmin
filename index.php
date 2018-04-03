@@ -16,7 +16,9 @@
 <body>
     <form method="POST" id="inslForm">
         <input type="submit" class="green-text text-darken-2" id="install">
+        <input type="submit" name="update">
     </form>
+
         <script src="app/ajax.js"></script>
         <footer></footer>
 
@@ -65,9 +67,9 @@ require_once("install/install.php");
 $d = new Db("localhost", "root", "", "test");
 $d->Check();
 
-$d->getQuery('CREATE TABLE clanky(id INT, content VARCHAR(32))');
+//$d->getQuery('CREATE TABLE clanky(id INT, content VARCHAR(32))');
 //$d->getQuery('DEFAULT CHARACTER SET utf8');
-$d->checkQ();
+//$d->checkQ();
 //$d->checkQ();
 $d->getQuery('DROP TABLE clanky');
 $d->checkQ();
@@ -80,6 +82,18 @@ $d->getQuery('CREATE TABLE clanky(  id INT NOT NULL AUTO_INCREMENT,
 
 
 $d->checkQ();
+$d->getQuery("CREATE TABLE reload (id INT NOT NULL AUTO_INCREMENT, 
+                                    variale INT, 
+                                    PRIMARY KEY(id))");
+$d->checkQ();
+
+
+if($_POST["update"]) {
+        $d->getQuery("UPDATE `reload` SET `variale`= `variale` +1" );
+}
+Db::InsertQuery();
+
+
 
 
 $f = new PridatClanek("nazev", "shortDescribe", "content", "submit", "https://unsplash.com/photos/5fNmWej4tAA", "Přidat článek");
@@ -114,4 +128,3 @@ $f->JSCehecker();
 $t->getLast();
 
 ?>
-42

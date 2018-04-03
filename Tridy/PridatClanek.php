@@ -48,10 +48,10 @@ class PridatClanek
      *
      */
     public function getField() {
-        $this->nazev = $_POST["nazev"];
-        $this->content = $_POST["content"];
-        $this->shortDescribe = $_POST["shortDescribe"];
-        $this->submit = $_POST["submit"];
+        $nazev = $_POST["nazev"];
+        $content = $_POST["content"];
+        $hortDescribe = $_POST["shortDescribe"];
+        $submit = $_POST["submit"];
 
     }
 
