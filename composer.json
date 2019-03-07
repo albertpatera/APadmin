@@ -1,0 +1,9 @@
+{
+	"require": {
+		"monolog/monolog": "1.0.*",
+		"tracy/tracy": "^2.6",
+		"faapz/pdo": "^1.11",
+		"php": ">=5.6.0",
+		"ext-pdo": "*"
+	}
+}

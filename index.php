@@ -1,4 +1,12 @@
+<?php
+include 'vendor/autoload.php';
+use Tracy\Debugger;
 
+Debugger::enable();
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="cs-cz">
 <head>
@@ -19,40 +27,10 @@
         <input type="submit" name="update">
     </form>
 
-        <script src="app/ajax.js"></script>
+
         <footer></footer>
 
-<script>
-    var id = $("#id").val();
 
-    $.ajax({
-        type: "post", 
-        dataType: "text",
-        url: "install/install.php",
-        data: "{}",
-        contentType: "application/json; charset=utf-8",
-        
-        
-
-    })
-    $("#install").click(function(e){
-        e.preventDefault();
-        $.ajax({
-            url: "/src/APadmin/install/install.php",
-            type: "POST",
-            data: JSON.stringify({'data': 'filled'}),
-            dataType: "json", 
-            traditional: true,
-            contentType: "application/json; charset=utf-8",
-            
-                
-            
-
-            //error: alert("error")
-
-        })
-    })
-</script>
 </body>
 </html>
 
@@ -60,41 +38,11 @@
 require_once("Tridy/Db.php");
 require_once("Tridy/PridatClanek.php");
 require_once("Tridy/getHTML.php");
-require_once("Tridy/Db.php");
+//require_once("Tridy/Db.php");
 require_once("Tridy/Forms.php");
 
 require_once("install/install.php");
-$d = new Db("localhost", "root", "", "test");
-$d->Check();
-
-//$d->getQuery('CREATE TABLE clanky(id INT, content VARCHAR(32))');
-//$d->getQuery('DEFAULT CHARACTER SET utf8');
-//$d->checkQ();
-//$d->checkQ();
-$d->getQuery('DROP TABLE clanky');
-$d->checkQ();
-$d->getQuery('CREATE TABLE clanky(  id INT NOT NULL AUTO_INCREMENT, 
-                                 title VARCHAR(32), 
-                                  short_describe VARCHAR(32),
-                                content VARCHAR(32), 
-                                PRIMARY KEY(id) 
-                                )');
-
-
-$d->checkQ();
-$d->getQuery("CREATE TABLE reload (id INT NOT NULL AUTO_INCREMENT, 
-                                    variale INT, 
-                                    PRIMARY KEY(id))");
-$d->checkQ();
-
-
-if($_POST["update"]) {
-        $d->getQuery("UPDATE `reload` SET `variale`= `variale` +1" );
-}
-Db::InsertQuery();
-
-
-
+/*$d = new Db("localhost", "root", "", "test");
 
 $f = new PridatClanek("nazev", "shortDescribe", "content", "submit", "https://unsplash.com/photos/5fNmWej4tAA", "Přidat článek");
 //$d->getQuery("INSERT INTO clanky (title, short_describe, content) VALUES ('nazev', 'shortDescribe', $this->content)");
@@ -106,7 +54,17 @@ $forms->addSubmit("submit", "Register !");
 $forms->addGroup('register', 'Registration form');
 
 
-$d->checkQ();
+$d->getSimpleInsert();
+
+
+function caller() {
+
+}
+
+if($_POST["submit"]) {
+    $d->getSimpleInsert();
+    print_r($_POST);
+    }
 
 //$d->getQuery('INSERT INTO clanky VALUES(NULL, NULL, NULL,  NULL)');
 //$d->checkQ();
@@ -122,9 +80,8 @@ $f->generateForm();
 $f->getAction();
 $f->Vypis();
 $f->vlozZaznam();
-$d->checkQ();
 
 $f->JSCehecker();
-$t->getLast();
-
+$t->getEnd('p');
+*/
 ?>

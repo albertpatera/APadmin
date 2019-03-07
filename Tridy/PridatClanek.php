@@ -12,7 +12,8 @@
  * @return Kompletni vypis admin interface for added article
  */
 
- require_once("Db.php");
+ require_once 'Db.php';
+ include "PridatClanek.php";
 class PridatClanek
 {
     /*
@@ -27,7 +28,7 @@ class PridatClanek
 
     public function __construct($nazev, $shortDesctibe, $content, $submit, $imgCat, $title)
     {
-
+  //      Dbs::__construct('localhost', 'root', '', 'd124371_apczweb');
         $this->nazev = $nazev;
         $this->shortDescribe = $shortDesctibe;
         $this->content = $content;
@@ -97,13 +98,11 @@ class PridatClanek
     
     public static function vlozZaznam()
     {
+        include 'Db.php';
+
         if($_POST['submit']) {
 
-            Db::getQuery("INSERT INTO clanky (title, short_describe, content) VALUES (". $_POST['nazev'] . ", ". $_POST['shortDescribe'] . ", ".$_POST['content'] . ")");
-            var_dump("kkk");
-            die();
-            Db::getQuery()->execute();
-        }
+          }
     }
 
     public function Vypis()
