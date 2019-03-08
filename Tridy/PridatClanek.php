@@ -12,9 +12,8 @@
  * @return Kompletni vypis admin interface for added article
  */
 
- require_once 'Db.php';
- include "PridatClanek.php";
-class PridatClanek
+ include ("Db.php");
+class PridatClanek extends Db
 {
     /*
      * Deklarace argumentu + deklarace roli
@@ -28,12 +27,12 @@ class PridatClanek
 
     public function __construct($nazev, $shortDesctibe, $content, $submit, $imgCat, $title)
     {
-  //      Dbs::__construct('localhost', 'root', '', 'd124371_apczweb');
+        Db::__construct('localhost', 'root', '', 'd124371_apczweb');
         $this->nazev = $nazev;
         $this->shortDescribe = $shortDesctibe;
         $this->content = $content;
         $this->submit = $submit;
-        $this->imgCat = "<img src='images/test.jpg' class='cats'>";
+        $this->imgCat = "<img src='images/test.jpg' style='width: 100%; height: 350px; z-index: 50;' class='cats'>";
         $this->title = $title;
     }
 
@@ -48,25 +47,42 @@ class PridatClanek
      * @TODO form action method POST
      *
      */
-    public function getField() {
-        $nazev = $_POST["nazev"];
-        $content = $_POST["content"];
-        $hortDescribe = $_POST["shortDescribe"];
-        $submit = $_POST["submit"];
+    public function getField($input = array()) {
+
+        foreach ($input as $item => $value)  {
+            print_r($input);
+        }
 
     }
 
     /*
      * Frunkce pro generovni formulare
      */
-    public function generateForm() {
-        echo $this->imgCat;
-        echo "<form action='index.php' method='POST'>";
-            echo "<input type='text' name='nazev' placeholder='name of article' id='title'><br>";
-            echo "<textarea  class='materialize-textarea' type='text' name='shortDescribe' placeholder='shortDescribe of article'></textarea><br>";
-            echo "<textarea class='materialize-textarea' type='text' name='content' placeholder='content'></textarea><br>";
-            echo "<input type='submit' name='submit' value='Submit'><br>";
-        echo "</form>";
+    public function generateForm($arr = array(), $method) {
+        //echo $this->imgCat;
+
+        $form = '<form  class="md-form" action="index.php" method="' . $method . '">';
+            $form .= '<div class="file-fields">';
+        foreach ($arr as $item => $values)
+        {
+
+
+            $form .= '';
+
+           $form .= '<span> ' . $item. '</span>';
+                $form .=  '<input type="text" name="' . $item . '"><br>';
+
+        }
+
+
+
+        $form .= '</form>';
+        $form .= '</div>';
+
+        echo '<input type="submit" name="submit">';
+
+        echo $form;
+
 
     }
 
@@ -79,7 +95,7 @@ class PridatClanek
      */
     public function getTititle()
     {
-        echo "<h1>" . $this->title. "<h1>";
+        echo "<h2 class='card card-header display-4 text-warning'>" . $this->title. "</h2>";
     }
 
     /*
@@ -95,7 +111,7 @@ class PridatClanek
         <?php
     }
 
-    
+
     public static function vlozZaznam()
     {
         include 'Db.php';
@@ -108,6 +124,10 @@ class PridatClanek
     public function Vypis()
     {
 
+    }
+
+    public function getTitle() {
+        echo $this->imgCat;
     }
 
 

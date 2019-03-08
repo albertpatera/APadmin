@@ -66,7 +66,7 @@ class Db
     public function initPDO() {
 
         $dsn = 'mysql:dbname=' . 'd124371_apczweb' . ';host=' . 'localhost' . '';
-        $pdo = new PDO($dsn, 'root', '', '');
+        $pdo = new PDO($dsn, 'root', '');
         try {
             $pdo = new PDO($dsn, 'root', '');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -74,7 +74,7 @@ class Db
             die('Connection failed: ' . $e->getMessage());
         }
 
-        $dotaz = $pdo->query("SELECT jmeno, prijmeni FROM uzivatele");
+        //$dotaz = $pdo->query("SELECT jmeno, prijmeni FROM uzivatele");
     }
 
 
@@ -110,16 +110,34 @@ class Db
 
         // Připravení dotazu
         // Připravení dotazu
-        $dotaz = $pdo->prepare("INSERT into clanky (title, short_describe, content) VALUES(?, ?, ?)");
+        //$query = "INSERT into clanky (`title`, `short_describe`, `content`, `date`) VALUES(?,?,?,?)";
+        $dotaz = $pdo->prepare('INSERT into clanky (`title`, `short_describe`, `content`, `date`) VALUES(?,?,?,?)');
 // Vykonání dotazu
-        $vysledek = $dotaz->execute(array(
-            $_POST['nazev'],
-            $_POST['shortDescribe'],
-            $_POST['content']
+
+        $dotaz->execute(array(
+            $_POST["title"],
+            $_POST["content"],
+            $_POST["shortDescribe"],
+            date('Y-m-d h:i:s')
+
         ));
+
+        print_r($_POST);
+
+
+
+
+
+
+
 // Vykonání dotazu
 
 
+    }
+
+
+    public function generateInput() {
+        echo "<input type='submit' name='submit'>";
     }
     /*
      * Kontrola, zda jsou spravne zadane udaje pro pripojeni k databazi
