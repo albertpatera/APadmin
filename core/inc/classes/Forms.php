@@ -9,6 +9,8 @@
 
 * @param name, Label
 */
+
+namespace Core\Inc\Classes;
 class Forms 
 {
 	
@@ -37,24 +39,24 @@ class Forms
 	}
 
 	public function addLabel($label) {
-		echo "<label class='label'>" . $this->label  . "</label>";  
+		echo "<label class='label'>" . $this->label  . "</label>";
 	}
 
 	public function addText($type, $class, $name, $label) {
 		Forms::addLabel('label');
-		echo  "<input type='text' class='" . $this->class . "'>";
+		echo  "<input type='text' classes='" . $this->class . "'>";
 		var_dump('test');
 	}
 
 	public function addPassword($type, $class, $name, $label) {
 		self::addLabel($label);
-		echo  "<input type='password' class='" . $this->class . "'>";
+		echo  "<input type='password' classes='" . $this->class . "'>";
 		var_dump('test');
 	}
 
 	public function addEmail($type, $class, $name, $label) {
 		self::addLabel($label);
-		echo  "<input type='email' class='" . $this->class . "'>";
+		echo  "<input type='email' classes='" . $this->class . "'>";
 		var_dump('test');
 	}
 

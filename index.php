@@ -1,87 +1,75 @@
 <?php
-include 'vendor/autoload.php';
+
+
+//require_once ("")
+
+define('ROOT_DIR', __DIR__);
+define('WWW_DIR', ROOT_DIR . DIRECTORY_SEPARATOR . 'public_html' . DIRECTORY_SEPARATOR);
+define("BASE_DIR", ROOT_DIR .DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR);
+//define("BASE_DIR", ROOT_DIR .DIRECTORY_SEPARATOR . 'core' . DIRECTORY_SEPARATOR);
+
+require_once 'core/inc/classes/PridatClanek.php';
+require_once 'core/inc/classes/Db.php';
+
+
+require 'vendor/autoload.php';
+//require_once 'Tridy/PridatClanek.php';
+
 use Tracy\Debugger;
+require_once 'core/inc/classes/Requestor.php';
 
 Debugger::enable();
+$req = new \Core\Inc\Classes\Requestor_class();
+$req::requireFile('PridatClanek', 'core/inc/classes/');
+$req::getDataFromSession("home", "Session log");
+$req::requireFile("Db", 'core/inc/classes/');
+$message = array();
+
+$insA = new \Core\Inc\Classes\PridatClanek('title', 'description', 'content', 'submit', 'image/test.png', 'Add Article');
+$db = new \Core\Inc\Classes\Db('localhost', 'root', '', 'test');
+$db->getSimpleInsert();
+//$insA->getField();
+
+$inputs = array('title' => $_POST['title'],
+                'shortDescribe' => $_POST['shortDescribe'],
+                'content' => $_POST['content'],
+                'url' => $_POST['url'],
+                'catsName' => $_POST['category'],
+
+
+    );
+//$insA->getTitle();
+$insA->generateForm($inputs, 'POST');
+$insA->getTititle();
 
 
 
-?>
-<!DOCTYPE html>
-<html lang="cs-cz">
-<head>
-    <meta charset="UTF-8">
-    <title>Přidat článek</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Open+Sans?selection.family=Open+Sans" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+if($_POST['submit']) {
+    $db->getSimpleInsert();
+    $message[] = 'ok';
+    echo implode('<br>', $message);
 
-    <!-- Compiled and minified JavaScript -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
-    <form method="POST" id="inslForm">
-        <input type="submit" class="green-text text-darken-2" id="install">
-        <input type="submit" name="update">
-    </form>
-
-
-        <footer></footer>
-
-
-</body>
-</html>
-
-<?php
-require_once("Tridy/Db.php");
-require_once("Tridy/PridatClanek.php");
-require_once("Tridy/getHTML.php");
-//require_once("Tridy/Db.php");
-require_once("Tridy/Forms.php");
-
-require_once("install/install.php");
-/*$d = new Db("localhost", "root", "", "test");
-
-$f = new PridatClanek("nazev", "shortDescribe", "content", "submit", "https://unsplash.com/photos/5fNmWej4tAA", "Přidat článek");
-//$d->getQuery("INSERT INTO clanky (title, short_describe, content) VALUES ('nazev', 'shortDescribe', $this->content)");
-//$d->InsertQuery();
-                    //$label, $class, $name, $type, $legend, $value
-$forms = new Forms("jhbn", "hnjn", "nmbnm", "submit", "reg.form", "testing");
-//$forms->addText('text', 'Jmeno:', 'firstname', 'btn btn-success');
-$forms->addSubmit("submit", "Register !");
-$forms->addGroup('register', 'Registration form');
-
-
-$d->getSimpleInsert();
-
-
-function caller() {
 
 }
-
-if($_POST["submit"]) {
-    $d->getSimpleInsert();
-    print_r($_POST);
-    }
-
-//$d->getQuery('INSERT INTO clanky VALUES(NULL, NULL, NULL,  NULL)');
-//$d->checkQ();
-
-
-
-$t = new getHTML("div", "wrapper");
-
-//$t->getFirst();
-$f->getField();
-$f->getTititle();
-$f->generateForm();
-$f->getAction();
-$f->Vypis();
-$f->vlozZaznam();
-
-$f->JSCehecker();
-$t->getEnd('p');
-*/
 ?>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="form-group">
+                        <?php
+                        $insA->generateForm($inputs, 'POST');
+                        ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
