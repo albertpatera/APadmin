@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ad619bf-29dd-43c7-937d-8ce8f8afe856" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/inc/classes/Requestor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/model/view/MenuArticle/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/people.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/rest.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/APadmin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/APadmin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tridy/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/inc/classes/Db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tridy/Forms.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/inc/classes/Forms.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tridy/PridatClanek.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/inc/classes/PridatClanek.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tridy/getHTML.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/inc/classes/getHTML.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tridy`/PDO.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/inc/classes/PDO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ajax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/inc/classes/PridatClanek.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/inc/classes/PridatClanek.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/inc/classes/Requestor.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/inc/classes/Requestor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -39,8 +36,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+            <state relative-caret-position="510">
+              <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/model/view/MenuArticle/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -48,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/inc/classes/PridatClanek.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+            <state relative-caret-position="396">
+              <caret line="57" column="110" selection-start-line="57" selection-start-column="110" selection-end-line="57" selection-end-column="110" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -61,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/inc/classes/Requestor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="680">
+              <caret line="45" selection-start-line="45" selection-end-line="45" />
             </state>
           </provider>
         </entry>
@@ -80,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/core/inc/classes/Db.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -138,9 +144,10 @@
         <option value="$PROJECT_DIR$/core/inc/class/getHTML.php" />
         <option value="$PROJECT_DIR$/core/inc/class/PridatClanek.php" />
         <option value="$PROJECT_DIR$/core/inc/classes/Db.php" />
-        <option value="$PROJECT_DIR$/core/inc/classes/Requestor.php" />
         <option value="$PROJECT_DIR$/core/inc/classes/PDO.php" />
         <option value="$PROJECT_DIR$/core/inc/classes/Forms.php" />
+        <option value="$PROJECT_DIR$/core/inc/classes/Requestor.php" />
+        <option value="$PROJECT_DIR$/core/model/view/MenuArticle/index.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/core/inc/classes/PridatClanek.php" />
       </list>
@@ -152,6 +159,9 @@
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
       <path value="$PROJECT_DIR$/vendor/faapz/pdo" />
+      <path value="$PROJECT_DIR$/vendor/summernote/lang" />
+      <path value="$PROJECT_DIR$/vendor/summernote/font" />
+      <path value="$PROJECT_DIR$/vendor/summernote/plugin" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -188,13 +198,22 @@
               <item name="APadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="APadmin" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="APadmin" type="b2602c69:ProjectViewProjectNode" />
               <item name="APadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APadmin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="APadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuArticle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="APadmin" type="b2602c69:ProjectViewProjectNode" />
@@ -227,6 +246,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\APadmin\images" />
       <recent name="C:\xampp\htdocs\APadmin\core\inc\classes" />
       <recent name="C:\xampp\htdocs\APadmin\core\inc\class" />
     </key>
@@ -258,7 +278,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16580000" />
+    <option name="totallyTimeSpent" value="31127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -322,20 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/inc/classes/getHTML.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/inc/classes/Db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/inc/classes/PDO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -346,6 +352,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/inc/classes/getHTML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/inc/classes/Forms.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -353,31 +366,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/core/inc/classes/Db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/inc/classes/Requestor.php">
+    <entry file="file://$PROJECT_DIR$/images/rest.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/people.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/model/view/MenuArticle/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        <state relative-caret-position="510">
+          <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/inc/classes/Requestor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/inc/classes/PridatClanek.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="55" column="36" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+        <state relative-caret-position="396">
+          <caret line="57" column="110" selection-start-line="57" selection-start-column="110" selection-end-line="57" selection-end-column="110" />
           <folding>
             <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />

@@ -6,6 +6,9 @@
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
       <path value="$PROJECT_DIR$/vendor/faapz/pdo" />
+      <path value="$PROJECT_DIR$/vendor/summernote/lang" />
+      <path value="$PROJECT_DIR$/vendor/summernote/font" />
+      <path value="$PROJECT_DIR$/vendor/summernote/plugin" />
     </include_path>
   </component>
   <component name="PhpUnit">

@@ -5,6 +5,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/faapz/pdo" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/summernote/font" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/summernote/lang" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/summernote/plugin" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/tracy/tracy" />
     </content>
     <orderEntry type="inheritedJdk" />

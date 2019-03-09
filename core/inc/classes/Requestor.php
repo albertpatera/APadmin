@@ -23,7 +23,7 @@ class Requestor_class
     public static function requireFile($url, $dir = NULL) {
         if($url) {
             require_once("$url" . ".php");
-            Debugger::barDump($url, "include classes:" .  $url. "");
+            Debugger::barDump($url . $dir, "include classes:" .  $url . " / " . $dir . "");
         } else {
             Debugger::barDump($url, "problem with including");
 
@@ -43,9 +43,35 @@ class Requestor_class
     }
 
     public static function getDataFromSession($data, $post) {
-        self::setSession();
+
         echo $_SESSION["$data"] = "$post";
         Debugger::barDump($_SESSION, 'session info');
 
     }
+
+    public static function issetField($post_data) {
+        if(!isset($_POST["$post_data"])) {
+            $_POST["$post_data"] = "";
+            Debugger::barDump($post_data, "$post_data initializaliation successed");
+        } else {
+            Debugger::barDump($post_data, "$post_data initializaliation failed");
+
+        }
+    }
+    public static function flashMessage($type, $msg) {
+        $f = "<span class=' information alert alert-$type '>";
+        $f .= $msg;
+        $f .= "</span>";
+
+        if($type) {
+            Debugger::barDump($type, "Flash type" .$type . "init with " . $msg);
+        } else {
+            Debugger::barDump($type, "init failed");
+
+        }
+
+        echo $f;
+
+    }
 }
+

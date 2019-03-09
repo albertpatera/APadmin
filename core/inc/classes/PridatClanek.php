@@ -10,11 +10,9 @@ class PridatClanek
      * Deklarace argumentu + deklarace roli
      */
 
-    private static $nazev;
-    private static $shortDescribe;
-    private static $content;
-    private static $submit;
-    private static $title;
+    public $MENU = array(
+            'identificator' => 'addActicle'
+    );
 
     public function __construct($nazev, $shortDesctibe, $content, $submit, $imgCat, $title)
     {
@@ -23,7 +21,7 @@ class PridatClanek
         $this->shortDescribe = $shortDesctibe;
         $this->content = $content;
         $this->submit = $submit;
-        $this->imgCat = "<img src='images/test.jpg' style='width: 100%; height: 350px;' class='cats'>";
+        $this->imgCat = "<img src='$imgCat' style='width: 100%; height: 350px;' class='cats'>";
         $this->title = $title;
     }
 
@@ -52,12 +50,19 @@ class PridatClanek
     public function generateForm($input = array(), $method) {
         $form = '<form action="index.php" method="' .  $method .  '">';
         foreach ($input as $item => $value) {
-            $form .= '<div class="col-md-4">';
+
+            $form .= '<div class="col-md-12">';
+
             $form .= '<label for="te">' . $item .'</label>';
             $form .= '<p>';
-                $form .= '<input type="text" class="form-control" name="' . $item . '">';
+                $form .= '<input type="text" class="form-control" name="' . $item . '" placeholder="' . $value . '">';
             $form .= '</p>';
             $form .= "</div>";
+
+            if($item == "content") {
+
+                $form .= '<textarea class="form-control" name="' . $item . '"></textarea>';
+            }
         }
         $form .= '<input type="submit" class="form-control btn-sm btn btn-primary " name="submit" value="POST to public">';
         $form .= '</form>';
@@ -76,7 +81,7 @@ class PridatClanek
     {
         $render ="<span style='width: 100%; height: 350px;'>". $this->imgCat . "</span>";
         echo $render;
-        echo "<h1>" . $this->title. "</h1>";
+        echo "<h1 class='display-4 card card-heading text-primary'>" . $this->title. "</h1>";
     }
 
     /*
@@ -106,6 +111,8 @@ class PridatClanek
     {
 
     }
+
+
 
 
 
