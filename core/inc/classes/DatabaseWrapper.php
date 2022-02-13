@@ -11,7 +11,7 @@ namespace FaaPz\PDO;
 
 use Tracy\Debugger;
 
-class PDO
+class DatabaseWrapper
 {
     private $connection;
     public function __construct($host,$user,$pass)

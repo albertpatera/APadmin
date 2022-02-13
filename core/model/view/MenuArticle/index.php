@@ -7,12 +7,19 @@
  */
 
 $MENU = array(
-    "identificator" => 'Addarticle'
-
+        "pridat clanek", "o projektu", "Autor", "kontakt"
 );
 
-foreach ($MENU as $item => $value) {
-    echo "<li id='" . $MENU['identificator'] . "'><a href='#'" . $MENU["identificator"]. "' class='btn btn-primary'>" .  $item."</a></li>";
+//Declare the array
+$flowers = array("Rose","Lili","Jasmine","Hibiscus","Tulip","Sun Flower","Daffodil","Daisy");
+echo "The array is:\n";
+//Prints the array
+foreach($flowers as $flower){
+    echo $flower . "\n";
 }
-
-\Tracy\Debugger::barDump($MENU["id"]);
+echo substr_replace("Hello","world",0);
+foreach ($MENU as $key => $value) {
+    $test = "O projektu";
+    echo str_replace($test, "_", 0);
+    echo "<li style='list-style-type: none'><a href='#" . $key ."_" . $value .  "'>" . $value. "</a></li>";
+}
